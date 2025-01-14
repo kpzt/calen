@@ -24,7 +24,7 @@
             <h2>Adicionar Sala</h2>
             <form id="formSala">
                 <input type="text" id="nomeSala" placeholder="Nome da Sala" required>
-                <input type="number" id="capacidadeSala" placeholder="Capacidade" min="1" max="30" required>
+                <input type="number" id="capacidadeSala" placeholder="Capacidade" min="1" max="30" >
                 <button type="submit">Adicionar Sala</button>
             </form>
         </section>
@@ -36,36 +36,25 @@
                     <option  value="">Selecione um curso</option>               
                                                             
                 </select>
+                
                 <select id="salaId" required>
-                    <option value="">Selecione uma sala</option>
-                    
+                    <option value="">Selecione uma sala</option>           
                 </select>
+
                 <input type="date" id="dataAgendamento" required>
                 <input type="time" id="horaAgendamento" required>
-
-                <div class="botao" >
-
-                <a id="BotaoAgenda" href="index.html" target="_blank">VEJA SUA AGENDA</a>
-
-
-            </div>
-                    
+        
                 <button onclick="MostraBotao()" type="submit">Agendar</button>
             </form>
         </section>
-
         <section>
             <h2>Agendamentos</h2>
             <ul id="listaAgendamentos"></ul>
         </section>
-
-        <div class="mostraNomes">
-            
-            <p id="teste"></p>
-            <p id="teste2"></p>
+        <div class="botao">
+            <a id="BotaoAgenda" href="novoindex.html" target="_blank">VEJA SUA AGENDA</a>
         </div>
-        <button onclick="jesus()" id="botaoLocal">SALVAR INFORMACOES</button>
     </main>
-    <script src="calendario TS.js"></script>
+    <script src="script1.js"></script>
 </body>
 </html>
