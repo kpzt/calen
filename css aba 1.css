@@ -1,3 +1,4 @@
+
 /* Reset básico */
 * {
     margin: 0;
@@ -85,16 +86,19 @@ ul li {
     text-decoration: none;
 }
 
+
 .botaoInfo{
     margin-top: 30%;
     text-align: center;
     align-items: center;
+    
 }
 
 p{
    display: inline;
    margin-left: 150px ;
-   background: #45a049;  
+   background: #45a049;
+   
 }
 
 a{
