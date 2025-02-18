@@ -1,0 +1,32 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ShoppingCart } from "lucide-react";
+
+const products = [
+  { id: 1, name: "Camisa Brasil 2024", price: "R$ 299,90", image: "/brasil.png" },
+  { id: 2, name: "Camisa Argentina 2024", price: "R$ 279,90", image: "/argentina.png" },
+  { id: 3, name: "Camisa França 2024", price: "R$ 289,90", image: "/franca.png" },
+];
+
+export default function LojaCamisas() {
+  return (
+    <div className="p-6 max-w-4xl mx-auto">
+      <h1 className="text-3xl font-bold mb-6 text-center">Loja de Camisas de Time</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {products.map((product) => (
+          <Card key={product.id} className="rounded-2xl shadow-lg overflow-hidden">
+            <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
+            <CardContent className="p-4 flex flex-col items-center">
+              <h2 className="text-xl font-semibold text-center">{product.name}</h2>
+              <p className="text-lg text-gray-600 mt-2">{product.price}</p>
+              <Button className="mt-4 w-full flex items-center justify-center gap-2">
+                <ShoppingCart size={20} /> Comprar
+              </Button>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+}
